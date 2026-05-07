@@ -33,8 +33,8 @@ if __name__ == '__main__':
     for x in range(0, WIDTH):
         for y in range(0, HEIGHT):
             # Convert pixel coordinate to complex number
-            c = complex(math.exp(RE_START + (x / WIDTH) * (RE_END - RE_START)),
-                        math.exp(IM_START + (y / HEIGHT) * (IM_END - IM_START)))
+            c = complex(RE_START + (x / WIDTH) * (RE_END - RE_START),
+                        IM_START + (y / HEIGHT) * (IM_END - IM_START))
             # Compute the number of iterations
             m = mandelbrot(c)
             # The color depends on the number of iterations
